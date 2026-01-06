@@ -37,8 +37,8 @@ import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 const adapter = process.env.CF_PAGES ? cloudflarePages() : vercel({ mode: "serverless" });
 
 export default defineConfig({
-    site: siteConfig.siteURL,
-    base: "/",
+    site: "https://louis033.github.io",
+    base: "/Ladrian-Fiction",
     trailingSlash: "always",
     adapter: adapter,
     integrations: [
