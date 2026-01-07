@@ -107,10 +107,10 @@ export const siteConfig: SiteConfig = {
                 // 在主页显示文本
                 enable: true,
                 // 主标题
-                title: "Twilight",
+                title: "Ladrian Fiction",
                 // 副标题，支持单个字符串或字符串数组
                 subtitle: [
-                    "Illuminate Our Paths",
+                    "Is this a real life?",
                 ],
                 // 副标题打字机效果
                 typewriter: {
@@ -189,7 +189,7 @@ export const navBarConfig: NavBarConfig = {
             children: [
                 {
                     name: "GitHub",
-                    url: "https://github.com/Example",
+                    url: "https://github.com/Louis033",
                     external: true,
                     icon: "fa6-brands:github",
                 },
@@ -343,7 +343,7 @@ export const profileConfig: ProfileConfig = {
     // 头像配置 (相对于 /public 目录)
     avatar: "/assets/images/avatar.png",
     // 信息配置
-    name: "Twilight",
+    name: "Ladrian Fiction",
     // 简介配置
     bio: "Hi",
     // 链接配置
@@ -362,7 +362,7 @@ export const announcementConfig: AnnouncementConfig = {
     // 公告标题
     title: "Announcement",
     // 公告内容
-    content: "Welcome to my blog!",
+    content: "Welcome to my Fictional Website!",
     // 允许用户关闭公告
     closable: true,
     // 链接配置
