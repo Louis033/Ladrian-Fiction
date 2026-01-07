@@ -24,7 +24,7 @@ Puisi dalam bahasa inggris yang ku buat pertama di sekitar setahun lalu.
 
 ## 📄 Download PDF
 
-<a href="../../../assets/pdfs/first-post.pdf" download>
+<a href="../../../assets/pdfs/grand-show.pdf" download>
   👉 Unduh versi PDF
 </a>
 
