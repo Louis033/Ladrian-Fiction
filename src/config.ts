@@ -338,6 +338,25 @@ export const umamiConfig = {
 } as const;
 
 
+// 资料配置
+export const profileConfig: ProfileConfig = {
+    // 头像配置 (相对于 /public 目录)
+    avatar: "/assets/images/avatar.png",
+    // 信息配置
+    name: "Ladrian Fiction",
+    // 简介配置
+    bio: "Hi",
+    // 链接配置
+    links: [
+        {
+            name: "GitHub",
+            icon: "fa6-brands:github",
+            url: "https://github.com/Spr-Aachen/Twilight",
+        },
+    ],
+};
+
+
 // 公告配置
 export const announcementConfig: AnnouncementConfig = {
     // 公告标题
