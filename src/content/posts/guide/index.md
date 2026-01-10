@@ -3,7 +3,7 @@ title: Guide for Blog Template
 published: 2001-10-02
 description: "How to use this blog template."
 cover: "./cover.webp"
-pinned: true
+pinned: false
 tags: []
 category: Guides
 draft: true

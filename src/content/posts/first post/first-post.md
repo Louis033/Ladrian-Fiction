@@ -5,7 +5,6 @@ published: 2026-01-07
 tags: [Puisi]
 category: Puisi
 draft: false
-cover: ./cover.webp
 ---
 
 ## Tentang Cerita Ini
