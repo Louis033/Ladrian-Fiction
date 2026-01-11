@@ -1,5 +1,5 @@
 ---
-title: Website World Building ku = Aesleth Codex
+title: Website World Building ku Aesleth Codex
 published: 2026-10-01
 description: "Berisi tentang lore-lore dunia fantasi bercampur sci-fi di dunia Aesleth"
 cover: "./cover.png"
