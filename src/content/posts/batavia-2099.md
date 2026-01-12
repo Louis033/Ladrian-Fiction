@@ -3,7 +3,7 @@ title: "Batavia 2099"
 description: "Cerita ekspedisi seperti Clair Obscure Expedition 33 tapi dengan setting Indonesia di sejarah timeline yang berbeda"
 published: 2026-01-12
 tags: [Fiksi]
-category: Puisi
+category: Fiksi Scifi
 draft: false
 ---
 

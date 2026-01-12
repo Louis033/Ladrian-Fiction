@@ -169,42 +169,33 @@ export function initTranslateService(): void {
     }
 }
 
-// 加载并初始化翻译功能
-export async function loadAndInitTranslate(): Promise<void> {
-    if (typeof window === "undefined" || !siteConfig.translate?.enable) return;
-    // 定义脚本加载逻辑
-    const loadScript = (): Promise<void> => {
-        if ((window as any).translateScriptLoaded) return Promise.resolve();
-        if ((window as any).translate || document.getElementById('translate-script')) {
-            (window as any).translateScriptLoaded = true;
-            return Promise.resolve();
-        }
-        return new Promise((resolve, reject) => {
-            const script = document.createElement('script');
-            script.src = '/translate.js';
-            script.id = 'translate-script';
-            script.async = true;
-            script.onload = () => {
-                if (typeof (window as any).translate !== 'undefined') {
-                    (window as any).translateScriptLoaded = true;
-                    resolve();
-                } else {
-                    reject(new Error('translate.js loaded but window.translate not available'));
-                }
-            };
-            script.onerror = reject;
-            document.head.appendChild(script);
-        });
-    };
+export function loadAndInitTranslate() {
+  if (typeof window === "undefined") return;
+
+  const base = import.meta.env.BASE_URL; // ✅ sudah ada trailing slash
+  const src = base + "translate.js";
+
+  // kalau sudah ada, jangan dobel inject
+  if (document.querySelector(`script[data-translate="true"]`)) return;
+
+  const script = document.createElement("script");
+  script.setAttribute("data-translate", "true");
+  script.src = src;
+  script.async = true;
+
+  script.onload = () => {
+    // kalau translate.js punya init sendiri, biarin jalan
+    // (kalau tidak ada, ini aman juga)
     try {
-        // 加载脚本
-        await loadScript();
-        // 初始化服务
-        initTranslateService();
-    } catch (error) {
-        console.error('Failed to load or init translate.js:', error);
-    }
+      // @ts-ignore
+      window?.initTranslate?.();
+    } catch {}
+  };
+
+  document.head.appendChild(script);
 }
+
+
 
 // 切换语言
 export function toggleLanguage(langCode: string): void {

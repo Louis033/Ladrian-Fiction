@@ -9,6 +9,9 @@ import { i18n } from "@i18n/translation";
 import Key from "@i18n/i18nKey";
 import "@styles/musicplayer.css";
 
+const BASE = import.meta.env.BASE_URL; // contoh: "/Ladrian-Fiction/"
+const withBase = (p: string) => `${BASE}${p.replace(/^\/+/, "")}`;
+
 
 // 音乐播放器模式，可选 "local" 或 "meting"
 let mode = musicPlayerConfig.mode ?? "meting";
@@ -51,7 +54,7 @@ let currentSong: MusicPlayerTrack = {
     id: 0,
     title: "Music",
     artist: "Artist",
-    cover: "/favicon/icon-light.ico",
+    cover: "",
     url: "",
     duration: 0,
 };
